@@ -23,8 +23,9 @@ jobs:
           destination: prefix
 workflows:
     version: 2
-    jobs:
-      - test
-      - package:
-          requires:
-            - test
+    two_job_flow:
+      jobs:
+        - test
+        - package:
+            requires:
+              - test
