@@ -6,5 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: The First Step
+          name: Gradle test
           command: gradle test
+      - store_test_results:
+          path: test-results
