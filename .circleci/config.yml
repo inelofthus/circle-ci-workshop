@@ -21,3 +21,10 @@ jobs:
       - store_artifacts:
           path: build/libs
           destination: prefix
+ workflows:
+    version: 2
+    jobs:
+      - test
+      - package:
+          requires:
+            - test
